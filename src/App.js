@@ -1,9 +1,14 @@
-import "./App.css";
+// import "./App.css";
 
+import Header from "./components/Header";
+import "./Container.module.css";
 const App = () => {
 	return (
 		<div>
-			<h1 className="heading">React 22 zaliczeniowy FC converter</h1>
+			<h2>Project React2 zaliczeniowy FC converter</h2>
+			<Header></Header>
+
+			<button>Kliknij</button>
 		</div>
 	);
 };
