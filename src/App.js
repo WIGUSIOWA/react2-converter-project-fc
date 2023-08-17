@@ -1,13 +1,21 @@
-// import "./App.css";
+import "./App.css";
+
+// import { useState } from "react";
+// import Container from "./components/Container";
 import Header from "./components/Header";
-import styles from "./components/Container.module.css";
-import Main from "./components/Main";
-// import styles from "./components/Main.module.css";
+import Input from "./components/Input";
+import Select from "./components/Select";
+import Button from "./components/Button";
+import Output from "./components/Output";
+
 const App = () => {
 	return (
-		<div className={styles.container}>
+		<div className="container">
 			<Header></Header>
-			<Main label="enter value"></Main>
+			<Input label="enter value"></Input>
+			<Select></Select>
+			<Button></Button>
+			<Output></Output>
 		</div>
 	);
 };

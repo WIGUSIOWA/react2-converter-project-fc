@@ -1,0 +1,6 @@
+import styles from "./Button.module.css";
+
+const Button = (props) => {
+	return <button className={styles.convertButton}>convert</button>;
+};
+export default Button;

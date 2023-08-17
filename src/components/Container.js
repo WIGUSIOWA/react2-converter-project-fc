@@ -1,6 +1,6 @@
 import styles from "./Container.module.css";
 
-const Container = () => {
+const Container = (props) => {
 	return <div className={styles.container}></div>;
 };
 
