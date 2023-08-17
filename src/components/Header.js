@@ -1,7 +1,9 @@
-const Header = () => {
+const Header = (props) => {
 	return (
 		<div>
-			<h2>kolejny nagłówek</h2>
+			
+			<div>currency converter</div>
+			
 		</div>
 	);
 };

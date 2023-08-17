@@ -1,0 +1,23 @@
+
+
+
+
+.convert-button {
+	width: 50%;
+	height: 30px;
+	background-color: rgb(15, 18, 43);
+	color: ivory;
+	margin-top: 10px;
+}
+
+
+
+.output {
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	margin-top: 10px;
+}
