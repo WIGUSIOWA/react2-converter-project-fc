@@ -4,6 +4,6 @@ import styles from "./Output.module.css";
 const Output = (props) => {
 	// const [value, setValue] = useState("");
 
-	return <output />;
+	return <output>{props.result}</output>;
 };
 export default Output;

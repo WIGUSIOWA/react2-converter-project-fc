@@ -4,8 +4,9 @@ const Input = (props) => {
 	return (
 		<input
 			className={styles.container}
-			type="value"
+			type="number"
 			placeholder={props.label}
+			name="amount"
 		/>
 	);
 };

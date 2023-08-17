@@ -1,6 +1,6 @@
 const Select = () => {
 	return (
-		<select>
+		<select name="currency">
 			<option value="eur">EUR</option>
 			<option value="usd">USD</option>
 			<option value="chf">CHF</option>
