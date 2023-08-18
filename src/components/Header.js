@@ -1,10 +1,13 @@
-import styles from "./Header.module.css"
+import styles from "./Header.module.css";
+import wolfImage from "../data/wolf250.jpg";
 
-const Header = (props) => {
+const Header = () => {
 	return (
 		<div>
-			<img src="components/data/wolf.jpg" />
-			<div>currency converter</div>
+			<div>
+				<img src={wolfImage} className={styles.logo} />
+			</div>
+			<h3 className={styles.heading}>currency converter</h3>
 		</div>
 	);
 };
