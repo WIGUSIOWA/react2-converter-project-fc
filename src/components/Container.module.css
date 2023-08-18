@@ -28,3 +28,11 @@ body {
 	flex-direction: column;
 	text-align: center;
 }
+
+@media screen and (min-width: 1025px) {
+	.container {
+		width: 50vw;
+		font-size: 30px;
+		background-color: #7399a3;
+	}
+}
