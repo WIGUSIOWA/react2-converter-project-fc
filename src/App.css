@@ -9,6 +9,7 @@
 body {
 	height: 100vh;
 	width: 100vw;
+	background-color: rgb(59, 59, 61);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,3 +39,10 @@ body {
 	align-items: center;
 }
 
+@media screen and (min-width: 1025px) {
+	.container {
+		width: 50vw;
+		font-size: 30px;
+		background-color: #7399a3;
+	}
+}

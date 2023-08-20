@@ -6,23 +6,29 @@ import Input from "./components/Input";
 import Select from "./components/Select";
 import Button from "./components/Button";
 import Output from "./components/Output";
+import Loader from "./components/Loader";
 
 const App = () => {
 	const [result, setResult] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
+	
 
 	const getData = async (curr) => {
+		setIsLoading(true);
 		try {
-			// loaderHandler("flex");
+			loaderHandler("flex");
 			const res = await fetch(
 				`https://api.nbp.pl/api/exchangerates/rates/a/${curr}/`
 			);
 			const data = await res.json();
-			// loaderHandler("none");
+			loaderHandler("none");
 			return data;
 		} catch (error) {
-			// loaderHandler("none");
+			loaderHandler("none");
 			alert("An error occurred while fetching the data, please try later.");
 			throw error;
+		} finally {
+			setIsLoading(false);
 		}
 	};
 
@@ -47,15 +53,17 @@ const App = () => {
 			setResult(`${(amount * exchange).toFixed(2)} PLN`);
 		}
 	};
+
 	return (
 		<div className="container">
 			<Header></Header>
 			<form onSubmit={handleOnSubmit}>
-				<Input label="enter value"></Input>
+				<Input></Input>
 				<Select></Select>
 				<Button></Button>
 			</form>
 			<Output result={result}></Output>
+			<Loader></Loader>
 		</div>
 	);
 };

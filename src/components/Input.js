@@ -7,6 +7,7 @@ const Input = (props) => {
 			type="number"
 			placeholder={props.label}
 			name="amount"
+			label="enter value"
 		/>
 	);
 };
