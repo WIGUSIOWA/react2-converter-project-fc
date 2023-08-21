@@ -29,11 +29,9 @@ const App = () => {
 
 	const handleOnSubmit = async (event) => {
 		event.preventDefault();
-		console.log(event);
 
 		const currency = event.target.currency.value;
 		const amount = event.target.amount.value;
-		console.log(currency, amount);
 
 		if (isNaN(amount) || amount.trim() === "" || parseFloat(amount) < 0.01) {
 			return alert("Wrong input.");
