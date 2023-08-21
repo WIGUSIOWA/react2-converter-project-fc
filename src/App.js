@@ -1,5 +1,4 @@
 import "./App.css";
-
 import { useState } from "react";
 import Header from "./components/Header";
 import Input from "./components/Input";
@@ -11,20 +10,16 @@ import Loader from "./components/Loader";
 const App = () => {
 	const [result, setResult] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
-	
 
 	const getData = async (curr) => {
 		setIsLoading(true);
 		try {
-			loaderHandler("flex");
 			const res = await fetch(
 				`https://api.nbp.pl/api/exchangerates/rates/a/${curr}/`
 			);
 			const data = await res.json();
-			loaderHandler("none");
 			return data;
 		} catch (error) {
-			loaderHandler("none");
 			alert("An error occurred while fetching the data, please try later.");
 			throw error;
 		} finally {
@@ -63,7 +58,7 @@ const App = () => {
 				<Button></Button>
 			</form>
 			<Output result={result}></Output>
-			<Loader></Loader>
+			<Loader isLoading={isLoading}></Loader>
 		</div>
 	);
 };

@@ -1,6 +1,15 @@
 import styles from "./Loader.module.css";
-const Loader = document.querySelector(".loader-container");
-const loaderHandler = (val) => {
-	Loader.style.display = val;
+
+const Loader = ({ isLoading }) => {
+	return (
+		<div
+			className={`${styles["loader-container"]} ${
+				isLoading ? styles["active"] : ""
+			}`}
+		>
+			<div className={styles["loader"]}></div>
+		</div>
+	);
 };
+
 export default Loader;
